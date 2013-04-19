@@ -140,7 +140,7 @@ if(${CMAKE_VERSION} VERSION_LESS 2.8.3)
 endif()
 
 if(NOT SIP_EXECUTABLE_NOTFOUND)
-  message("SIP binding generator available.")
+  message(STATUS "SIP binding generator available.")
   set(sip_helper_FOUND TRUE)
 else()
   message(WARNING "SIP binding generator NOT available.")
@@ -179,9 +179,10 @@ function(build_sip_binding PROJECT_NAME SIP_FILE)
     set(LIBRARY_DIRS ${${PROJECT_NAME}_LIBRARY_DIRS})
     set(LDFLAGS_OTHER ${${PROJECT_NAME}_LDFLAGS_OTHER})
 
+    assert(PYTHON_EXECUTABLE)
     add_custom_command(
         OUTPUT ${SIP_BUILD_DIR}/Makefile
-        COMMAND python ${sip_SIP_CONFIGURE} ${SIP_BUILD_DIR} ${SIP_FILE} ${sip_LIBRARY_DIR} \"${INCLUDE_DIRS}\" \"${LIBRARIES}\" \"${LIBRARY_DIRS}\" \"${LDFLAGS_OTHER}\"
+        COMMAND ${PYTHON_EXECUTABLE} ${sip_SIP_CONFIGURE} ${SIP_BUILD_DIR} ${SIP_FILE} ${sip_LIBRARY_DIR} \"${INCLUDE_DIRS}\" \"${LIBRARIES}\" \"${LIBRARY_DIRS}\" \"${LDFLAGS_OTHER}\"
         DEPENDS ${sip_SIP_CONFIGURE} ${SIP_FILE} ${sip_DEPENDS}
         WORKING_DIRECTORY ${sip_SOURCE_DIR}
         COMMENT "Running SIP generator for ${PROJECT_NAME} Python bindings..."
