@@ -1,5 +1,24 @@
 ## python_qt_binding - 0.2.12-0
 
+User `dthomas@drudge` released the packages in the `python_qt_binding` repository by running `/usr/bin/bloom-release -r indigo -t indigo python_qt_binding` on `Thu, 13 Feb 2014 01:05:39 -0000`
+
+The `python_qt_binding` package was released.
+
+Version of package(s) in repository `python_qt_binding`:
+- rosdistro version: `null`
+- old version: `None-0`
+- new version: `0.2.12-0`
+
+Versions of tools used:
+- bloom version: `0.4.9`
+- catkin_pkg version: `0.1.26`
+- rosdep version: `0.10.25`
+- rosdistro version: `0.3.4`
+- vcstools version: `0.1.33`
+
+
+## python_qt_binding - 0.2.12-0
+
 User `dthomas@drudge` released the packages in the `python_qt_binding` repository by running `/usr/bin/bloom-release -r hydro -t hydro python_qt_binding` on `Wed, 08 Jan 2014 23:45:31 -0000`
 
 The `python_qt_binding` package was released.
