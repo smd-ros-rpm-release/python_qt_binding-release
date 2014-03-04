@@ -2,6 +2,11 @@
 Changelog for package python_qt_binding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.12 (2014-01-08)
+-------------------
+* python 3 compatibility
+* fix sip bindings when paths contain spaces (`#9 <https://github.com/ros-visualization/python_qt_binding/issues/9>`_)
+
 0.2.11 (2013-08-21)
 -------------------
 * allow overriding binding order
